@@ -212,99 +212,8 @@ body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(r
 .tpl-btn{padding:6px 14px;border:1px solid var(--bd);background:var(--bg2);color:var(--t2);border-radius:6px;font-family:var(--ff);font-size:.75em;font-weight:600;cursor:pointer;transition:all .2s}
 .tpl-btn:hover{border-color:var(--accent);color:var(--accentL)}
 .tpl-btn.danger:hover{border-color:var(--rose);color:var(--rose)}
-/* Calorie Tracker */
-.cal-tracker{background:var(--bg2);border-radius:var(--r4);padding:24px;border:1px solid var(--bd);box-shadow:var(--sh);margin-bottom:16px;position:relative;overflow:hidden;transition:background .3s}
-.cal-tracker::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--em),transparent);opacity:.5}
-.ct-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.ct-header-icon{font-size:1.3em}
-.ct-header-text{font-weight:700;font-size:1.05em;background:linear-gradient(135deg,var(--em),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.ct-summary{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
-.ct-current{font-family:var(--fm);font-size:2.2em;font-weight:800;color:var(--t1)}
-.ct-of{font-size:.85em;color:var(--t3)}
-.ct-target-val{font-family:var(--fm);font-weight:700;color:var(--t2)}
-.ct-bar-wrap{position:relative;height:32px;background:var(--bg1);border-radius:8px;border:1px solid var(--bd);margin-bottom:8px;overflow:visible}
-.ct-bar-fill{height:100%;border-radius:8px;transition:width .6s cubic-bezier(.4,0,.2,1);position:relative;z-index:1}
-.ct-bar-fill.green{background:linear-gradient(90deg,#059669,#10b981)}
-.ct-bar-fill.amber{background:linear-gradient(90deg,#d97706,#f59e0b)}
-.ct-bar-fill.red{background:linear-gradient(90deg,#dc2626,#ef4444)}
-.ct-marker{position:absolute;top:-4px;bottom:-4px;width:3px;border-radius:2px;z-index:2;transition:left .3s}
-.ct-marker::after{content:attr(data-label);position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-family:var(--fm);font-size:.6em;font-weight:700;white-space:nowrap;padding:2px 6px;border-radius:4px}
-.ct-marker.ideal{background:var(--em)}.ct-marker.ideal::after{color:var(--em);background:rgba(16,185,129,.15)}
-.ct-marker.max{background:var(--rose)}.ct-marker.max::after{color:var(--rose);background:rgba(244,63,94,.15)}
-.ct-remaining{font-family:var(--fm);font-size:.82em;color:var(--t3);margin-bottom:16px}
-.ct-remaining strong{color:var(--t2)}
-.ct-meals{margin-bottom:16px}
-.ct-meal{display:flex;align-items:center;padding:10px 14px;background:var(--bg1);border-radius:var(--r1);border:1px solid var(--bd);margin-bottom:6px;animation:sUp .25s ease;transition:background .2s}
-.ct-meal:hover{background:var(--bg4)}
-.ct-meal-icon{font-size:1.2em;margin-right:10px;flex-shrink:0}
-.ct-meal-info{flex:1;min-width:0}
-.ct-meal-name{font-weight:600;font-size:.88em}
-.ct-meal-time{font-family:var(--fm);font-size:.72em;color:var(--t3)}
-.ct-meal-cal{font-family:var(--fm);font-weight:700;font-size:.9em;color:var(--em);margin:0 8px}
-.ct-meal-del{background:none;border:none;color:var(--t3);cursor:pointer;padding:4px 6px;border-radius:4px;font-size:.8em;transition:all .2s}
-.ct-meal-del:hover{color:var(--rose);background:rgba(244,63,94,.1)}
-.ct-add-row{display:flex;gap:8px}
-.ct-add-input{flex:1;padding:12px 16px;background:var(--bg1);border:1px solid var(--bd);color:var(--t1);border-radius:var(--r1);font-family:var(--ff);font-size:.9em;transition:all .3s}
-.ct-add-input:focus{outline:none;border-color:var(--em);background:var(--bg2)}
-.ct-add-input::placeholder{color:var(--t3)}
-.ct-add-cal{width:100px;padding:12px;background:var(--bg1);border:1px solid var(--bd);color:var(--t1);border-radius:var(--r1);font-family:var(--fm);font-size:.9em;text-align:center;transition:all .3s;flex-shrink:0}
-.ct-add-cal:focus{outline:none;border-color:var(--em)}
-.ct-add-btn{padding:12px 20px;background:linear-gradient(135deg,#059669,#10b981);border:none;color:#fff;border-radius:var(--r1);font-family:var(--ff);font-weight:700;font-size:.9em;cursor:pointer;transition:all .3s;flex-shrink:0}
-.ct-add-btn:hover{box-shadow:0 4px 16px rgba(16,185,129,.4);transform:translateY(-1px)}
-.ct-macros{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--bd)}
-.ct-macro{text-align:center;padding:8px;background:var(--bg1);border-radius:var(--r1);border:1px solid var(--bd)}
-.ct-macro-val{font-family:var(--fm);font-weight:700;font-size:1em;margin-bottom:2px}
-.ct-macro-lbl{font-size:.65em;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
-.ct-quick-btns{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
-.ct-quick{padding:6px 14px;background:var(--bg1);border:1px solid var(--bd);color:var(--t2);border-radius:20px;font-family:var(--ff);font-size:.75em;font-weight:600;cursor:pointer;transition:all .2s}
-.ct-quick:hover{border-color:var(--em);color:var(--em);background:rgba(16,185,129,.1)}
-.notif-badge{display:inline-block;width:8px;height:8px;border-radius:50%;margin-left:6px}
-/* Calorie Tracker */
-.ct-card{background:var(--bg2);border-radius:var(--r4);padding:24px;border:1px solid var(--bd);box-shadow:var(--sh);margin-bottom:20px;position:relative;overflow:hidden;transition:background .3s}
-.ct-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--em),transparent);opacity:.5}
-.ct-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-.ct-title{font-weight:700;font-size:1.05em;display:flex;align-items:center;gap:8px}
-.ct-title-text{background:linear-gradient(135deg,var(--em),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.ct-cals{font-family:var(--fm);font-size:1.6em;font-weight:800;text-align:center;margin-bottom:4px}
-.ct-cals-sub{font-size:.78em;color:var(--t3);text-align:center;margin-bottom:16px;font-family:var(--fm)}
-.ct-bar-wrap{position:relative;height:32px;background:var(--bg1);border-radius:16px;border:1px solid var(--bd);overflow:visible;margin-bottom:20px}
-.ct-bar-fill{height:100%;border-radius:16px;transition:width .6s cubic-bezier(.4,0,.2,1);position:relative;z-index:1}
-.ct-bar-fill.under{background:linear-gradient(90deg,var(--em),#34d399)}
-.ct-bar-fill.ideal{background:linear-gradient(90deg,#34d399,var(--amber))}
-.ct-bar-fill.over{background:linear-gradient(90deg,var(--amber),var(--rose))}
-.ct-marker{position:absolute;top:-6px;bottom:-6px;width:3px;border-radius:2px;z-index:2;transition:left .3s}
-.ct-marker-label{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-family:var(--fm);font-size:.6em;font-weight:700;white-space:nowrap;padding:2px 6px;border-radius:4px}
-.ct-marker.ideal{background:var(--em)}
-.ct-marker.ideal .ct-marker-label{color:var(--em);background:rgba(16,185,129,.15)}
-.ct-marker.max{background:var(--rose)}
-.ct-marker.max .ct-marker-label{color:var(--rose);background:rgba(244,63,94,.15)}
-.ct-add-row{display:flex;gap:8px;margin-bottom:12px}
-.ct-add-input{flex:1;padding:12px 16px;border:1px solid var(--bd);background:var(--bg1);color:var(--t1);border-radius:var(--r1);font-family:var(--fm);font-size:.95em;transition:all .3s}
-.ct-add-input::placeholder{color:var(--t3)}
-.ct-add-input:focus{outline:none;border-color:var(--em);background:var(--bg2)}
-.ct-add-name{flex:1.5}
-.ct-add-cal{flex:0.8;max-width:100px}
-.ct-add-btn{padding:12px 20px;border:none;background:linear-gradient(135deg,#059669,var(--em));color:#fff;border-radius:var(--r1);font-family:var(--ff);font-weight:700;font-size:.85em;cursor:pointer;transition:all .3s;flex-shrink:0}
-.ct-add-btn:hover{box-shadow:0 4px 16px rgba(16,185,129,.4);transform:translateY(-1px)}
-.ct-meals{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
-.ct-meals.open{max-height:500px}
-.ct-meal{display:flex;align-items:center;padding:10px 14px;margin-bottom:4px;background:var(--bg1);border-radius:var(--r1);border:1px solid var(--bd);transition:all .2s}
-.ct-meal:hover{background:var(--bg4)}
-.ct-meal-name{flex:1;font-weight:600;font-size:.88em}
-.ct-meal-cal{font-family:var(--fm);font-size:.85em;font-weight:700;color:var(--em);margin-right:12px}
-.ct-meal-time{font-family:var(--fm);font-size:.72em;color:var(--t3);margin-right:10px}
-.ct-meal-del{background:none;border:none;color:var(--t3);cursor:pointer;font-size:.8em;padding:4px 8px;border-radius:4px;transition:all .2s}
-.ct-meal-del:hover{color:var(--rose);background:rgba(244,63,94,.1)}
-.ct-toggle-meals{background:none;border:none;color:var(--t3);font-family:var(--ff);font-size:.8em;cursor:pointer;padding:6px 0;font-weight:600;transition:color .2s}
-.ct-toggle-meals:hover{color:var(--accentL)}
-.ct-quick-btns{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-.ct-quick{padding:6px 12px;border:1px solid var(--bd);background:var(--bg1);color:var(--t2);border-radius:20px;font-family:var(--ff);font-size:.75em;font-weight:600;cursor:pointer;transition:all .2s}
-.ct-quick:hover{border-color:var(--em);color:var(--em);background:rgba(16,185,129,.1)}
-.ct-macros{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
-.ct-macro{text-align:center;padding:10px 6px;background:var(--bg1);border-radius:var(--r1);border:1px solid var(--bd)}
-.ct-macro-val{font-family:var(--fm);font-weight:700;font-size:1.1em;margin-bottom:2px}
-.ct-macro-lbl{font-size:.68em;color:var(--t3);text-transform:uppercase;font-weight:600;letter-spacing:.06em}
-@media(max-width:480px){.header h1{font-size:1.7em}.egrid{grid-template-columns:repeat(6,1fr)}.stats-row{gap:8px}.stat-val{font-size:1.4em}.ai-row{flex-wrap:wrap}.ai-input{min-width:100%}.nav-tab{font-size:.75em;padding:10px 4px;gap:3px}.tpl-grid{grid-template-columns:1fr}.ct-add-row{flex-wrap:wrap}.ct-add-input{min-width:0}}
+
+@media(max-width:480px){.header h1{font-size:1.7em}.egrid{grid-template-columns:repeat(6,1fr)}.stats-row{gap:8px}.stat-val{font-size:1.4em}.ai-row{flex-wrap:wrap}.ai-input{min-width:100%}.nav-tab{font-size:.75em;padding:10px 4px;gap:3px}.tpl-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -323,17 +232,6 @@ body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(r
 <div class="ring-container"><svg width="180" height="180"><defs><linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:var(--accent)"/><stop offset="100%" style="stop-color:var(--cyan)"/></linearGradient></defs><circle class="ring-bg" cx="90" cy="90" r="80"/><circle class="ring-progress" cx="90" cy="90" r="80" id="progressRing"/></svg><div class="ring-label"><div class="ring-pct" id="pctText">0%</div><div class="ring-sub">completed</div></div></div>
 <div class="stats-row"><div class="stat-box"><div class="stat-val" id="doneN">0</div><div class="stat-lbl">Done</div></div><div class="stat-box"><div class="stat-val" id="leftN">0</div><div class="stat-lbl">Left</div></div><div class="stat-box"><div class="stat-val" id="streakN">0</div><div class="stat-lbl">Streak</div></div></div>
 </div>
-<div class="ct-card" id="ctCard">
-<div class="ct-header"><div class="ct-title"><span>🔥</span><span class="ct-title-text">Calorie Tracker</span></div><button class="togbtn" onclick="openInlineGoals()" id="ctEditGoalBtn" style="font-size:.72em;padding:6px 12px" title="Edit calorie goals">✏️ Goals</button></div>
-<div id="ctFirstRunBanner" style="display:none;margin-bottom:14px;padding:14px 16px;background:rgba(16,185,129,.08);border:1px dashed rgba(16,185,129,.4);border-radius:var(--r2);text-align:center;animation:sUp .4s ease"><div style="font-size:1.3em;margin-bottom:4px">🎯</div><div style="font-weight:700;font-size:.92em;color:var(--em);margin-bottom:4px">Set your daily calorie goals</div><div style="font-size:.78em;color:var(--t2);margin-bottom:10px">Personalise your Target and Max to track your intake accurately.</div><button onclick="openInlineGoals()" style="padding:8px 22px;border:none;background:linear-gradient(135deg,#059669,var(--em));color:#fff;border-radius:20px;font-family:var(--ff);font-weight:700;font-size:.82em;cursor:pointer">Set Goals Now</button></div><div class="ct-cals"><span id="ctCurrent">0</span> <span style="font-size:.5em;color:var(--t3)">kcal</span></div>
-<div class="ct-cals-sub" id="ctGoalsDisplay" onclick="openInlineGoals()" title="Tap to edit goals" style="cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px">Target: <span id="ctTargetLabel">2,100</span> · Max: <span id="ctMaxLabel">2,300</span><span style="font-size:.68em;opacity:.45;margin-left:2px">✏️</span></div><div id="ctGoalsEdit" style="display:none;margin-bottom:12px;padding:14px;background:var(--bg1);border-radius:var(--r2);border:1px solid var(--bda);animation:sUp .25s ease"><div style="font-size:.8em;font-weight:700;color:var(--t2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">✏️ Edit Calorie Goals</div><div style="display:flex;gap:8px;align-items:center;margin-bottom:8px"><label style="font-size:.8em;color:var(--em);font-weight:700;width:90px;flex-shrink:0">🎯 Target</label><input type="number" id="ctInlineTarget" class="ct-add-input" style="flex:1;padding:8px 12px;font-size:.9em" placeholder="e.g. 2100" min="100" max="9999"><span style="font-size:.75em;color:var(--t3);flex-shrink:0">kcal</span></div><div style="display:flex;gap:8px;align-items:center;margin-bottom:12px"><label style="font-size:.8em;color:var(--rose);font-weight:700;width:90px;flex-shrink:0">🚫 Max</label><input type="number" id="ctInlineMax" class="ct-add-input" style="flex:1;padding:8px 12px;font-size:.9em" placeholder="e.g. 2300" min="100" max="9999"><span style="font-size:.75em;color:var(--t3);flex-shrink:0">kcal</span></div><div style="font-size:.72em;color:var(--t3);margin-bottom:10px">💡 Target = your ideal goal. Max = hard upper limit. Both update your progress bar instantly.</div><div style="display:flex;gap:8px"><button onclick="saveInlineGoals()" style="flex:1;padding:9px;border:none;background:linear-gradient(135deg,#059669,var(--em));color:#fff;border-radius:var(--r1);font-family:var(--ff);font-weight:700;font-size:.85em;cursor:pointer">Save Goals ✓</button><button onclick="cancelInlineGoals()" style="flex:1;padding:9px;background:var(--bg2);border:1px solid var(--bd);color:var(--t2);border-radius:var(--r1);font-family:var(--ff);font-weight:600;font-size:.85em;cursor:pointer">Cancel</button></div></div>
-<div class="ct-bar-wrap"><div class="ct-bar-fill under" id="ctBarFill" style="width:0%"></div><div class="ct-marker ideal" id="ctIdealMark" style="left:0%"><div class="ct-marker-label">Target</div></div><div class="ct-marker max" id="ctMaxMark" style="left:100%"><div class="ct-marker-label">Max</div></div></div>
-<div class="ct-quick-btns" id="ctQuickBtns"></div>
-<div class="ct-add-row"><input type="text" class="ct-add-input ct-add-name" id="ctMealName" placeholder="Meal name..."><input type="number" class="ct-add-input ct-add-cal" id="ctMealCal" placeholder="kcal"><button class="ct-add-btn" onclick="addMeal()">+ Add</button></div>
-<button class="ct-toggle-meals" onclick="toggleMealList()"><span id="ctMealTogText">Show meals (0)</span></button>
-<div class="ct-meals" id="ctMealList"></div>
-<div class="ct-macros"><div class="ct-macro"><div class="ct-macro-val" id="ctRemain" style="color:var(--em)">—</div><div class="ct-macro-lbl">Remaining</div></div><div class="ct-macro"><div class="ct-macro-val" id="ctMealCount" style="color:var(--accentL)">0</div><div class="ct-macro-lbl">Meals</div></div><div class="ct-macro"><div class="ct-macro-val" id="ctAvgMeal" style="color:var(--cyan)">—</div><div class="ct-macro-lbl">Avg/meal</div></div></div>
-</div>
 <div class="empty-state" id="emptyState" style="display:none"><div class="empty-state-icon">✨</div><h3>No tasks yet</h3><p>Add your first task or load a template.</p></div>
 <div class="period-section" id="mornSec" style="display:none"><div class="period-header" onclick="togPeriod('morn')"><span class="period-emoji">🌅</span><span class="period-name">Morning</span><span class="period-badge" id="mornBadge">0/0</span><span class="chevron open" id="mornChev">▼</span></div><div class="task-list open" id="mornList"><div class="task-list-inner" id="mornInner"></div></div></div>
 <div class="period-section" id="aftSec" style="display:none"><div class="period-header" onclick="togPeriod('aft')"><span class="period-emoji">☀️</span><span class="period-name">Afternoon</span><span class="period-badge" id="aftBadge">0/0</span><span class="chevron open" id="aftChev">▼</span></div><div class="task-list open" id="aftList"><div class="task-list-inner" id="aftInner"></div></div></div>
@@ -350,7 +248,7 @@ body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(r
 <div class="card card-sm"><div class="sec-title">📈 Weekly Analytics</div><div class="an-grid"><div class="an-box"><div class="an-val blue" id="anAvg">—</div><div class="an-lbl">Avg Completion</div></div><div class="an-box"><div class="an-val cyan" id="anStreak">0</div><div class="an-lbl">Current Streak</div></div><div class="an-box"><div class="an-val green" id="anBest">0</div><div class="an-lbl">Best Streak</div></div><div class="an-box"><div class="an-val amber" id="anTotal">0</div><div class="an-lbl">Days Tracked</div></div></div></div>
 <div class="card card-sm"><div class="sec-title">📊 Completion by Day of Week</div><div id="barArea"></div><div class="bw-grid" id="bwArea"></div></div>
 <div class="card card-sm"><div class="sec-title">📉 Trends</div><div id="trendArea"></div></div>
-<div class="card card-sm"><div class="sec-title">🔥 Calorie Trends — Last 7 Days</div><div id="calTrendArea"></div></div>
+
 </div>
 
 <!-- CALENDAR -->
@@ -372,13 +270,6 @@ body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(r
 <div class="sec-title">🔔 Notifications</div>
 <div class="sett-row"><div><div class="sett-label">Task Reminders</div><div class="sett-desc">Get notified before each task</div></div><button class="toggle-sw" id="notifToggle" onclick="toggleNotif()"></button></div>
 <div class="sett-row"><div><div class="sett-label">Reminder Lead Time</div><div class="sett-desc">How many minutes before</div></div><select class="fselect" id="notifLead" onchange="saveSettings()" style="width:100px"><option value="5">5 min</option><option value="10" selected>10 min</option><option value="15">15 min</option><option value="30">30 min</option></select></div>
-</div>
-<div class="settings-section">
-<div class="sec-title">🔥 Calorie Tracker</div>
-<div class="sett-row"><div><div class="sett-label">Target Calories</div><div class="sett-desc">Ideal daily intake goal</div></div><input type="number" class="finput" id="settCalTarget" value="2100" style="width:100px;text-align:center" onchange="updateCalSettings()"></div>
-<div class="sett-row"><div><div class="sett-label">Max Calories</div><div class="sett-desc">Hard upper limit</div></div><input type="number" class="finput" id="settCalMax" value="2300" style="width:100px;text-align:center" onchange="updateCalSettings()"></div>
-<div class="sett-row"><div><div class="sett-label">Quick Add Presets</div><div class="sett-desc">Common meals (name:calories, comma-separated)</div></div></div>
-<textarea class="finput" id="settCalPresets" rows="3" style="font-family:var(--fm);font-size:.82em;margin-top:8px" onchange="updateCalSettings()" placeholder="Coffee:50, Protein Shake:300, Chicken Rice:650"></textarea>
 </div>
 <div class="settings-section">
 <div class="sec-title">📦 Task Templates</div>
@@ -455,11 +346,8 @@ done=[];save('completedTasks',done);localStorage.setItem('lastResetDate',today);
 tasks=tasks.filter(t=>{if(t.repeat==='once')return t.date>=todayISO;return true});save('routineTasks',tasks);
 }
 initVoice();renderEmojiPicker();render();updateDT();setInterval(updateDT,1000);
-initCalTracker();
 document.getElementById('quote').textContent='"'+QUOTES[Math.floor(Math.random()*QUOTES.length)]+'"';
 document.getElementById('aiInput').addEventListener('keypress',e=>{if(e.key==='Enter')processAI()});
-document.getElementById('ctMealCal').addEventListener('keypress',e=>{if(e.key==='Enter')addMeal()});
-document.getElementById('ctMealName').addEventListener('keypress',e=>{if(e.key==='Enter')document.getElementById('ctMealCal').focus()});
 scheduleNotifications();
 }
 
@@ -655,7 +543,7 @@ else if(v==='settings'){document.getElementById('settView').style.display='block
 }
 
 // ═══ STATS ═══
-function renderStats(){renderHeatmap();renderAnalytics();renderDayBars();renderTrends();renderCalTrends()}
+function renderStats(){renderHeatmap();renderAnalytics();renderDayBars();renderTrends()}
 function getHistoryDays(n){const result=[],today=new Date();for(let i=n-1;i>=0;i--){const d=new Date(today);d.setDate(today.getDate()-i);const ds=d.toISOString().split('T')[0];const h=history[ds];if(i===0){const tt=getTodayTasks(),total=tt.length,dn=done.length;result.push({date:ds,pct:total?Math.round(dn/total*100):null,done:dn,total,dayOfWeek:d.getDay()})}else if(h)result.push({date:ds,pct:h.pct,done:h.done,total:h.total,dayOfWeek:d.getDay()});else result.push({date:ds,pct:null,done:0,total:0,dayOfWeek:d.getDay()})}return result}
 function renderHeatmap(){
 const area=document.getElementById('heatmapArea'),days=getHistoryDays(84);
@@ -690,7 +578,6 @@ const rem=42-(first+daysIn);for(let d=1;d<=rem;d++){const el=document.createElem
 function showPanel(ds,dt){document.getElementById('panelTitle').textContent=new Date(ds+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});const c=document.getElementById('panelTasks');c.innerHTML='';const h=history[ds];
 if(!dt.length&&!h){c.innerHTML='<p style="text-align:center;color:var(--t3);padding:20px">No tasks this day</p>'}else{
 if(h)c.innerHTML+='<div style="text-align:center;padding:12px;margin-bottom:12px;background:var(--bg1);border-radius:var(--r1);border:1px solid var(--bd)"><span style="font-size:1.8em;font-weight:800;color:var(--accentL);font-family:var(--fm)">'+h.pct+'%</span><div style="font-size:.8em;color:var(--t3);margin-top:4px">'+h.done+'/'+h.total+' completed</div></div>';
-const ch=calHistory[ds];if(ch){const cCol=ch.total>calSettings.max?'var(--rose)':ch.total>calSettings.target?'var(--amber)':'var(--em)';c.innerHTML+='<div style="text-align:center;padding:12px;margin-bottom:12px;background:var(--bg1);border-radius:var(--r1);border:1px solid var(--bd)"><span style="font-size:1.4em;font-weight:800;color:'+cCol+';font-family:var(--fm)">🔥 '+ch.total.toLocaleString()+' kcal</span><div style="font-size:.78em;color:var(--t3);margin-top:4px">'+ch.meals+' meal'+(ch.meals!==1?'s':'')+' · Target: '+calSettings.target.toLocaleString()+'</div>'+(ch.items?'<div style="font-size:.72em;color:var(--t3);margin-top:6px">'+ch.items.map(m=>m.name+' ('+m.cal+')').join(' · ')+'</div>':'')+'</div>'}
 const gr={morning:[],afternoon:[],evening:[]};dt.forEach(t=>gr[t.period].push(t));const icons={morning:'🌅',afternoon:'☀️',evening:'🌙'};
 ['morning','afternoon','evening'].forEach(p=>{if(!gr[p].length)return;const s=document.createElement('div');s.style.marginBottom='16px';s.innerHTML='<div style="font-weight:700;color:var(--accentL);margin-bottom:8px;font-size:.95em">'+icons[p]+' '+p.charAt(0).toUpperCase()+p.slice(1)+'</div>';gr[p].forEach(t=>{const r=document.createElement('div');r.style.cssText='display:flex;align-items:center;padding:12px;margin-bottom:6px;background:var(--bg1);border-radius:var(--r1);border:1px solid var(--bd)';r.innerHTML='<span style="font-size:1.4em;margin-right:12px">'+t.icon+'</span><div style="flex:1"><div style="font-weight:600;font-size:.92em">'+escHtml(t.name)+'</div><div style="font-size:.8em;color:var(--t3);font-family:var(--fm)">'+t.time+' · '+t.duration+'m</div>'+(t.notes?'<div style="font-size:.75em;color:var(--t3);font-style:italic;margin-top:2px">📝 '+escHtml(t.notes)+'</div>':'')+'</div>';s.appendChild(r)});c.appendChild(s)})}
 document.getElementById('dayPanel').classList.add('show')}
@@ -710,7 +597,6 @@ const picker=document.getElementById('accentPicker');picker.innerHTML='';
 ACCENTS.forEach(a=>{const dot=document.createElement('div');dot.className='acc-dot'+(settings.accent===a.id?' sel':'');dot.style.background=a.color;dot.onclick=()=>{settings.accent=a.id;saveSettings();applySettings();renderSettings()};picker.appendChild(dot)});
 // Templates
 renderTemplates();
-renderCalSettingsFields();
 }
 function toggleTheme(){settings.theme=settings.theme==='dark'?'light':'dark';saveSettings();applySettings();renderSettings()}
 function toggleNotif(){
@@ -794,7 +680,7 @@ templates.splice(idx,1);save('taskTemplates',templates);renderTemplates();
 
 // ═══ EXPORT/IMPORT ═══
 function exportData(){
-const data={tasks,history,templates,settings,streak,done,meals,calHistory,calSettings};
+const data={tasks,history,templates,settings,streak,done};
 const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
 const url=URL.createObjectURL(blob);
 const a=document.createElement('a');a.href=url;a.download='routine-backup-'+new Date().toISOString().split('T')[0]+'.json';
@@ -812,11 +698,7 @@ if(data.templates)templates=data.templates;
 if(data.settings){settings=data.settings;applySettings()}
 if(data.streak!=null)streak=data.streak;
 if(data.done)done=data.done;
-if(data.meals)meals=data.meals;
-if(data.calHistory)calHistory=data.calHistory;
-if(data.calSettings){calSettings=data.calSettings;save('calSettings',calSettings)}
 save('routineTasks',tasks);save('dayHistory',history);save('taskTemplates',templates);
-save('appSettings',settings);save('completedTasks',done);save('todayMeals',meals);save('calHistory',calHistory);localStorage.setItem('streak',streak);
 render();renderSettings();
 alert('Data imported successfully!');
 }catch(err){alert('Invalid file format')}
@@ -824,172 +706,7 @@ alert('Data imported successfully!');
 reader.readAsText(file);event.target.value='';
 }
 
-// ═══ CALORIE TRACKER ═══
-let meals=JSON.parse(localStorage.getItem('todayMeals'))||[];
-let calHistory=JSON.parse(localStorage.getItem('calHistory'))||{};
-let calSettings=JSON.parse(localStorage.getItem('calSettings'))||{target:2100,max:2300,presets:[{name:'Coffee',cal:50},{name:'Protein Shake',cal:300},{name:'Chicken & Rice',cal:650},{name:'Snack',cal:200}]};
-let calMealResetDate=localStorage.getItem('calMealResetDate');
 
-function initCalTracker(){
-const today=new Date().toDateString();
-if(!localStorage.getItem('calGoalsSet')){setTimeout(()=>{const b=document.getElementById('ctFirstRunBanner');if(b)b.style.display='block';},400);}
-if(calMealResetDate!==today){
-// Save yesterday's calories to history
-if(calMealResetDate&&meals.length>0){
-const yISO=new Date(calMealResetDate).toISOString().split('T')[0];
-const total=meals.reduce((s,m)=>s+m.cal,0);
-calHistory[yISO]={total,meals:meals.length,items:[...meals]};
-save('calHistory',calHistory);
-}
-meals=[];save('todayMeals',meals);
-localStorage.setItem('calMealResetDate',today);
-}
-renderCalTracker();
-}
-
-function renderCalTracker(){
-const total=meals.reduce((s,m)=>s+m.cal,0);
-const target=calSettings.target,max=calSettings.max;
-const pct=max>0?Math.min((total/max)*100,110):0;
-const idealPct=max>0?Math.min((target/max)*100,100):0;
-
-document.getElementById('ctCurrent').textContent=total.toLocaleString();
-document.getElementById('ctTargetLabel').textContent=target.toLocaleString();
-document.getElementById('ctMaxLabel').textContent=max.toLocaleString();
-
-// Bar fill
-const fill=document.getElementById('ctBarFill');
-fill.style.width=Math.min(pct,100)+'%';
-fill.className='ct-bar-fill '+(total<=target?'under':total<=max?'ideal':'over');
-
-// Markers
-document.getElementById('ctIdealMark').style.left=idealPct+'%';
-document.getElementById('ctMaxMark').style.left='calc(100% - 3px)';
-
-// Macros
-const remain=target-total;
-document.getElementById('ctRemain').textContent=remain>0?remain.toLocaleString():'0';
-document.getElementById('ctRemain').style.color=remain>0?'var(--em)':total>max?'var(--rose)':'var(--amber)';
-document.getElementById('ctMealCount').textContent=meals.length;
-document.getElementById('ctAvgMeal').textContent=meals.length?Math.round(total/meals.length):'—';
-
-// Toggle text
-document.getElementById('ctMealTogText').textContent=(document.getElementById('ctMealList').classList.contains('open')?'Hide':'Show')+' meals ('+meals.length+')';
-
-// Quick add buttons
-renderQuickBtns();
-
-// Meal list
-renderMealList();
-}
-
-function renderQuickBtns(){
-const wrap=document.getElementById('ctQuickBtns');wrap.innerHTML='';
-calSettings.presets.forEach(p=>{
-const btn=document.createElement('button');btn.className='ct-quick';
-btn.textContent=p.name+' ('+p.cal+')';
-btn.onclick=()=>{meals.push({name:p.name,cal:p.cal,time:new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})});save('todayMeals',meals);saveCalSnapshot();renderCalTracker()};
-wrap.appendChild(btn);
-});
-}
-
-function renderMealList(){
-const list=document.getElementById('ctMealList');list.innerHTML='';
-if(!meals.length){list.innerHTML='<div style="padding:12px;text-align:center;color:var(--t3);font-size:.85em;font-style:italic">No meals logged yet today</div>';return}
-[...meals].reverse().forEach((m,ri)=>{
-const i=meals.length-1-ri;
-const el=document.createElement('div');el.className='ct-meal';
-el.innerHTML='<div class="ct-meal-name">'+escHtml(m.name)+'</div><div class="ct-meal-time">'+m.time+'</div><div class="ct-meal-cal">'+m.cal+' kcal</div><button class="ct-meal-del" onclick="delMeal('+i+')">✕</button>';
-list.appendChild(el);
-});
-}
-
-function addMeal(){
-const nameInput=document.getElementById('ctMealName');
-const calInput=document.getElementById('ctMealCal');
-const name=nameInput.value.trim()||'Meal';
-const cal=parseInt(calInput.value);
-if(!cal||cal<=0)return alert('Enter calories');
-meals.push({name,cal,time:new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})});
-save('todayMeals',meals);saveCalSnapshot();
-nameInput.value='';calInput.value='';
-renderCalTracker();
-}
-
-function delMeal(idx){
-meals.splice(idx,1);save('todayMeals',meals);saveCalSnapshot();renderCalTracker();
-}
-
-function toggleMealList(){
-document.getElementById('ctMealList').classList.toggle('open');
-renderCalTracker();
-}
-
-function toggleCtSettings(){switchView('settings')}
-
-function saveCalSnapshot(){
-const todayISO=new Date().toISOString().split('T')[0];
-const total=meals.reduce((s,m)=>s+m.cal,0);
-calHistory[todayISO]={total,meals:meals.length,items:[...meals]};
-save('calHistory',calHistory);
-}
-
-function updateCalSettings(){
-calSettings.target=parseInt(document.getElementById('settCalTarget').value)||2100;
-calSettings.max=parseInt(document.getElementById('settCalMax').value)||2300;
-const presetsRaw=document.getElementById('settCalPresets').value;
-const presets=[];
-presetsRaw.split(',').forEach(p=>{
-const parts=p.trim().split(':');
-if(parts.length===2){const name=parts[0].trim(),cal=parseInt(parts[1]);if(name&&cal>0)presets.push({name,cal})}
-});
-if(presets.length)calSettings.presets=presets;
-save('calSettings',calSettings);
-localStorage.setItem('calGoalsSet','1');
-renderCalTracker();
-}
-
-function renderCalSettingsFields(){
-document.getElementById('settCalTarget').value=calSettings.target;
-document.getElementById('settCalMax').value=calSettings.max;
-document.getElementById('settCalPresets').value=calSettings.presets.map(p=>p.name+':'+p.cal).join(', ');
-}
-
-function openInlineGoals(){const edit=document.getElementById('ctGoalsEdit');const disp=document.getElementById('ctGoalsDisplay');const btn=document.getElementById('ctEditGoalBtn');if(!edit)return;edit.style.display='block';if(disp)disp.style.display='none';if(btn)btn.style.opacity='0.4';document.getElementById('ctFirstRunBanner').style.display='none';document.getElementById('ctInlineTarget').value=calSettings.target;document.getElementById('ctInlineMax').value=calSettings.max;setTimeout(()=>document.getElementById('ctInlineTarget').select(),50);}
-function saveInlineGoals(){const t=parseInt(document.getElementById('ctInlineTarget').value);const m=parseInt(document.getElementById('ctInlineMax').value);if(!t||t<100)return alert('Please enter a valid target (e.g. 2100)');if(!m||m<100)return alert('Please enter a valid max (e.g. 2300)');if(m<t)return alert('Max calories must be ≥ Target calories');calSettings.target=t;calSettings.max=m;save('calSettings',calSettings);localStorage.setItem('calGoalsSet','1');cancelInlineGoals();renderCalTracker();if(document.getElementById('settCalTarget'))document.getElementById('settCalTarget').value=t;if(document.getElementById('settCalMax'))document.getElementById('settCalMax').value=m;}
-function cancelInlineGoals(){const edit=document.getElementById('ctGoalsEdit');const disp=document.getElementById('ctGoalsDisplay');const btn=document.getElementById('ctEditGoalBtn');if(edit)edit.style.display='none';if(disp)disp.style.display='';if(btn)btn.style.opacity='';}
-function renderCalTrends(){
-const area=document.getElementById('calTrendArea');
-const days=[];const today=new Date();
-for(let i=6;i>=0;i--){
-const d=new Date(today);d.setDate(today.getDate()-i);
-const ds=d.toISOString().split('T')[0];
-const h=calHistory[ds];
-const label=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()];
-if(i===0){const total=meals.reduce((s,m)=>s+m.cal,0);days.push({date:ds,label,total,meals:meals.length})}
-else if(h)days.push({date:ds,label,total:h.total,meals:h.meals});
-else days.push({date:ds,label,total:null,meals:0});
-}
-const tracked=days.filter(d=>d.total!==null);
-if(!tracked.length){area.innerHTML='<div class="no-data">Log calories to see trends!</div>';return}
-const maxCal=Math.max(...tracked.map(d=>d.total),calSettings.max);
-let html='';
-days.forEach(d=>{
-const pct=d.total!==null&&maxCal>0?Math.round((d.total/maxCal)*100):0;
-let col='var(--em)';
-if(d.total!==null){if(d.total>calSettings.max)col='var(--rose)';else if(d.total>calSettings.target)col='var(--amber)'}
-const valText=d.total!==null?d.total.toLocaleString()+' kcal':'—';
-html+='<div class="bar-row"><div class="bar-label">'+d.label+'</div><div class="bar-track"><div class="bar-fill" style="width:'+pct+'%;background:'+col+'"></div></div><div class="bar-pct" style="color:'+col+'">'+valText+'</div></div>';
-});
-// Weekly average
-const avg=tracked.length?Math.round(tracked.reduce((s,d)=>s+d.total,0)/tracked.length):0;
-const diff=avg-calSettings.target;
-html+='<div style="display:flex;gap:12px;margin-top:16px">';
-html+='<div class="an-box" style="flex:1"><div class="an-val '+(diff<=0?'green':'amber')+'">'+avg.toLocaleString()+'</div><div class="an-lbl">7-day avg</div></div>';
-html+='<div class="an-box" style="flex:1"><div class="an-val '+(diff<=0?'green':'amber')+'">'+(diff>0?'+':'')+diff+'</div><div class="an-lbl">vs target</div></div>';
-html+='</div>';
-area.innerHTML=html;
-}
 
 init();
 </script>
